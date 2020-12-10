@@ -1,0 +1,11 @@
+#  Swapping of two numbers
+n,m=input().split()
+n,m=m,n
+print(n,m)
+
+
+C:\Users\nikhil\PycharmProjects\Fistproj\venv\Scripts\python.exe C:/Users/nikhil/PycharmProjects/Fistproj/Messanger.py
+2 3
+3 2
+
+Process finished with exit code 0

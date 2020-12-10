@@ -1,0 +1,13 @@
+#Print the sum of the digits
+n=input()
+sum=0
+for i in n:
+    sum+=int(i)
+print(sum)
+
+
+C:\Users\nikhil\PycharmProjects\Fistproj\venv\Scripts\python.exe C:/Users/nikhil/PycharmProjects/Fistproj/Messanger.py
+555
+15
+
+Process finished with exit code 0
