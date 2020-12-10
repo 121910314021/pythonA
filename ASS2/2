@@ -1,0 +1,11 @@
+array= list(map(int, input("enter by giving space").strip().split(' ')))
+array2= list(map(int, input("enter by giving space").strip().split(' ')))
+array2+=array
+print(array2)
+
+
+
+
+enter by giving space1 2 3 4 5
+enter by giving space6 7 8 9
+[6, 7, 8, 9, 1, 2, 3, 4, 5]
