@@ -1,0 +1,95 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@121910314021 
+121910314003
+/
+Assignment-answers-B14-03
+1
+00
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Assignment-answers-B14-03/Lab6 8.10.2020/Q.3Delete the last node from a given linked list..txt
+@121910314003
+121910314003 Add files via upload
+Latest commit 4ce2494 on Oct 8
+ History
+ 1 contributor
+53 lines (43 sloc)  1.08 KB
+  
+import sys
+import math
+
+
+# Link list node
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+# Function to push node at head
+def push(head, data):
+    if not head:
+        return Node(data)
+    temp = Node(data)
+    temp.next = head
+    head = temp
+    return head
+
+
+# Function to remove the last node
+# of the linked list
+def removeLastNode(head):
+    if head == None:
+        return None
+    if head.next == None:
+        head = None
+        return None
+    second_last = head
+    while (second_last.next.next):
+        second_last = second_last.next
+    second_last.next = None
+    return head
+
+
+# Driver code
+if __name__ == '__main__':
+
+    # Start with the empty list
+    head = None
+    # Use push() function to con
+    # the below list 8 . 23 . 11 . 29 . 12
+    head = push(head, 12)
+    head = push(head, 29)
+    head = push(head, 11)
+    head = push(head, 23)
+    head = push(head, 8)
+
+    head = removeLastNode(head)
+    while (head):
+        print("{} ".format(head.data), end="")
+        head = head.next
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
