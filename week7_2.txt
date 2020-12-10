@@ -1,0 +1,59 @@
+class Node:
+    def __init__(self,data=None):
+        self.data=data
+        self.next=None
+        self.prev=None
+class Doublel:
+    def __init__(self):
+        self.head=None
+    def append(self,data): 
+        new=Node(data)
+        if not self.head:
+            self.head=new
+            return
+        k=self.head
+        while k.next:
+            k=k.next
+        new.prev=k
+        k.next=new
+    def push(self,data):
+        new=Node(data)
+        if not self.head:
+            self.head=new
+            return
+        new.next=self.head
+        self.head.prev=new
+        self.head=new
+    def print(self):
+        k=self.head
+        while k:
+            print(str(k.data)+"-->",end="")
+            k=k.next
+    def pushnthnode(self,data,position):
+        new=Node(data)
+        if position==0 or not self.head:
+            new.next=self.head
+            self.head=new
+            return
+        k=self.head
+        for i in range(0,position-1):
+            o=k
+            k=k.next
+            if not k.next:
+                print("not possible")
+                return
+        new.next=k.next
+        new.prev=o
+        k.prev=new
+        k.next=new
+
+l=Doublel()
+l.push(0)
+l.push(1)
+l.push(2)
+l.print()
+
+out put
+
+
+2-->1-->0-->
